@@ -1,8 +1,14 @@
-a= str(input("ENTER FOUR DIGIT NUMBER"))
-if len(a)>3 and len(a)<=4:
-     if (a[0]==a[3]) and (a[1]==a[2]):
-         print("Palindrome ",a)
-     else:
-         print("Not Palindrome ",a)
+def is_palindrome(word):
+ 
+    word = word.replace(" ", "").lower()
+    reversed_word = word[::-1]
+
+    if word == reversed_word:
+        return True
+    else:
+        return False
+input_word = input("Enter a word or phrase: ")
+if is_palindrome(input_word):
+    print("It's a palindrome!")
 else:
-        print("PLEASE ENTER 4 DIGIT NUMBER:")
+    print("It's not a palindrome.")
